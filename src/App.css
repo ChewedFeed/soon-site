@@ -173,6 +173,7 @@ h1 {
   width: 432px;
   background: url(/public/description.png) repeat-y;
   color: rgba(255,255,255,0.9);
+  text-align: left;
 }
 .twitter {
   background: url(/public/bird.png) left center no-repeat;
