@@ -1,5 +1,5 @@
 # Deps
-FROM containers.chewedfeed.com/docker_hub_cache/library/node:19-alpine AS deps
+FROM containers.chewedfeed.com/docker_hub_cache/library/node:19-alpine AS build
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json yarn.lock ./
