@@ -23,7 +23,7 @@ export default function App() {
 
   // const [data] = await Promise.all([cmsData])
   useEffect(() => {
-    console.log("env", process.env)
+    console.log('env', process.env)
 
     const fetchData = async () => {
       if (process.env.REACT_APP_SOON_CMS !== undefined && process.env.REACT_APP_SOON_PROJECT !== undefined) {
