@@ -4,11 +4,9 @@ export default function ProgressBar({progress}) {
   }
 
   return (
-    <>
-      <section className="progress">
-        <div id="progressbar" style={{width: progress +'%'}}></div>
-        <h2 id="progressAmount">{progress}%</h2>
-      </section>
-    </>
+    <section className="progress">
+      <div id="progressbar" style={{width: progress +'%'}}></div>
+      <h2 id="progressAmount">{progress}%</h2>
+    </section>
   )
 }

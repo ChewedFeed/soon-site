@@ -4,10 +4,8 @@ export default function Uptime({status}) {
   }
 
   return (
-    <>
-      <div className="more_info">
-        <a href={status} className="button">Services Status</a>
-      </div>
-    </>
+    <div className="more_info">
+      <a href={status} className="button">Services Status</a>
+    </div>
   )
 }

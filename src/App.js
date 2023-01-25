@@ -44,7 +44,9 @@ export default function App() {
     fetchData().catch(console.error)
   }, [])
 
+  // set the title
   document.title = data.name;
+  console.log('data', data)
 
   return (
     <div id="gradient">

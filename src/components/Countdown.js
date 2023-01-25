@@ -26,8 +26,7 @@ function calcDiff(year, month, day) {
 }
 
 export default function Countdown(props) {
-  const tl = calcDiff(props.year, props.month, props.day)
-  const [timeLeft, setTimeleft] = useState(tl)
+  const [timeLeft, setTimeleft] = useState(calcDiff(props.year, props.month, props.day))
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimeleft(calcDiff(props.year, props.month, props.day))
@@ -40,22 +39,22 @@ export default function Countdown(props) {
       <div id="countdown">
         <span className="countdown_row countdown_show4">
           <span className="countdown_section">
-            <span className="countdown_amount">{tl.days}</span>
+            <span className="countdown_amount">{timeLeft.days}</span>
             <br />
             days
           </span>
           <span className="countdown_section">
-            <span className="countdown_amount">{tl.hours}</span>
+            <span className="countdown_amount">{timeLeft.hours}</span>
             <br />
             hours
           </span>
           <span className="countdown_section">
-            <span className="countdown_amount">{tl.minutes}</span>
+            <span className="countdown_amount">{timeLeft.minutes}</span>
             <br />
             minutes
           </span>
           <span className="countdown_section">
-            <span className="countdown_amount">{tl.seconds}</span>
+            <span className="countdown_amount">{timeLeft.seconds}</span>
             <br />
             seconds
           </span>
