@@ -9,7 +9,7 @@ RUN yarn install --frozen-lockfile
 FROM containers.chewedfeed.com/docker_hub_cache/library/node:19-alpine AS release
 WORKDIR /app
 ENV NODE_ENV production
-COPY --from=build /app ./
+COPY --from=build /app/ /app/
 EXPOSE 3000
 
 CMD ["yarn", "start"]
