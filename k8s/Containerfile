@@ -6,7 +6,7 @@ COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
 # Release
-FROM containers.chewedfeed.com/docker_hub_cache/library/nide:19-alpine AS release
+FROM containers.chewedfeed.com/docker_hub_cache/library/node:19-alpine AS release
 WORKDIR /app
 ENV NODE_ENV production
 COPY --from=build /app ./
